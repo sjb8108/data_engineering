@@ -1,37 +1,7 @@
-[
-  {
-    "ibn": "978-0-9659889-6-4",
-    "title": "Sabriel",
-    "publisheddate": "1995-02-16",
-    "pagecount": 192,
+{
+    "ibn": "978-1-225-66742-1",
+    "title": "Monet",
+    "publisheddate": "1963-05-30",
+    "pagecount": 1141,
     "audience": "teens"
-  },
-  {
-    "ibn": "978-1-00-105969-3",
-    "title": "Seeds of Yesterday",
-    "publisheddate": "1984-11-06",
-    "pagecount": 393,
-    "audience": "kids"
-  },
-  {
-    "ibn": "978-0-931624-99-5",
-    "title": "Bookhunter",
-    "publisheddate": "2007-05-13",
-    "pagecount": 69,
-    "audience": "kids"
-  },
-  {
-    "ibn": "978-1-4410-6640-4",
-    "title": "La imagen de una mujer",
-    "publisheddate": "1958-03-14",
-    "pagecount": 1030,
-    "audience": "kids"
-  },
-  {
-    "ibn": "978-1-74483-742-8",
-    "title": "Long Spoon Lane",
-    "publisheddate": "2005-05-16",
-    "pagecount": 333,
-    "audience": "adults"
-  }
-]
+}
