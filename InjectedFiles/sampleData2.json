@@ -1,0 +1,37 @@
+[
+  {
+    "ibn": "978-0-7402-9548-5",
+    "title": "Advances in clinical chemistry",
+    "publisheddate": "1969-01-30",
+    "pagecount": 154,
+    "audience": "kids"
+  },
+  {
+    "ibn": "978-0-669-01152-4",
+    "title": "Essai sur la langue de la reclame contemporaine",
+    "publisheddate": "1930-11-08",
+    "pagecount": 144,
+    "audience": "kids"
+  },
+  {
+    "ibn": "978-1-64304-892-5",
+    "title": "A Clockwork Orange",
+    "publisheddate": "1962-05-23",
+    "pagecount": 860,
+    "audience": "kids"
+  },
+  {
+    "ibn": "978-1-225-66742-1",
+    "title": "Monet",
+    "publisheddate": "1963-05-30",
+    "pagecount": 1141,
+    "audience": "teens"
+  },
+  {
+    "ibn": "978-1-376-65002-0",
+    "title": "Dance of the Gods",
+    "publisheddate": "2006-01-11",
+    "pagecount": 164,
+    "audience": "adults"
+  }
+]
