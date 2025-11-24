@@ -1,6 +1,15 @@
 Why My Design Choices:
 
- For ingesting data streams I used Amazon Kinesis Data Firehose, I would make it take in JSON files and convert the JSON to Apache Parquet since it is faster to query and convert Parquet to a database table. I had it connect the a created database and table called d1assignment and books respectively. For where the transformed data will land, I created an S3 general purpose bucket called d1-megazone, this bucket would also be parition by year, month, and day so imported parquet are organized by when they were ingested by the datastream. I used AWS Glue to make the database and table used. The table had 5 columns of data (ibn, title, publisheddate, pagecount, and audience) and 3 columns of paritions data (year, month, day). I used Amazon Athena to query the book table and was able to successfully select data using SQL queries to get different data the user wants. I created a python script that would loop over a folder called InjectedFiles to send and test the data stream. 
+ For ingesting data streams I used Amazon Kinesis Data Firehose, I would make it take in JSON files and convert the JSON to Apache Parquet 
+ since it is faster to query and convert Parquet to a database table. I had it connect to e a created database and table called d1assignment 
+ and books respectively. For where the transformed data will land, I created an S3 general purpose bucket called d1-megazone, this bucket 
+ would also be parition by year, month, and day so imported parquet are organized by when they were ingested by the datastream. I used AWS 
+ Glue to make the database and table used. The table had 5 columns of data (ibn, title, publisheddate, pagecount, and audience) and 3 columns 
+ of paritions data (year, month, day). I used Amazon Athena to query the book table and was able to successfully select data using SQL queries 
+ to get different data the user wants. I created a python script that would loop over a folder called InjectedFiles to send and test the data stream. 
  
  How to Improve/Scale:
- First and for most the person thing I would change is to use the Amazon CDK library for python so it is easier for developers to replicate what I made, rather than having to individually making the amazon application using the website. If i wanted to improve the python script I made, I would make the parameter ParitionKey used in the put_record function call not "1" and something for useful. Another change that could be implemented is that if a JSON files has multiple entries into the table I can called the function put_record_batch.
+ First and for most the person thing I would change is to use the Amazon CDK library for python so it is easier for developers to replicate 
+ what I made, rather than having to individually making the amazon application using the website. If i wanted to improve the python script I made, 
+ I would make the parameter ParitionKey used in the put_record function call not "1" and something for useful. Another change that could be 
+ implemented is that if a JSON files has multiple entries into the table I can call the function put_record_batch.

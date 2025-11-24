@@ -1,0 +1,12 @@
+Why My Design Choices:
+
+The program runs in O(n * m) in the worst case scenario, n is the amount of data in the memberInfo.csv file while m is the amount of data in the memberPaidInfo.csv assuming 
+all data is valid in both csv files. Its O (nm) because there is a nested for loop that loops over the entries in the paid info csv and loops over the info in member info to
+see if the member exists or not. I stored the data in dictonaries since it is easier to convert csv files to python dictonaries. When combining data into one python dictonary 
+I merged based on whether the member had a name in the member info csv and if that name did not conflict with the name that appeared in the rows in the member paid info csv.I 
+stored the output in a JSON file as JSON files are usually better for data analysis and look cleaner. 
+
+How to Scale and Improve: First thing I would like to improve is the time complexity, I believe the time complexity could be lowered using an finding algorithm like binary 
+search to find if the member exists or not. Another improvement would be to store the column names of the csv files instead of writing out the csv column name went entering 
+the data into a python dictonary. A good way to scale this is would be to send the JSON output to a AWS application like Kinesis Firehose so the data can be inputed in a database
+and data analysis can be done easier using SQL queries.
