@@ -106,7 +106,7 @@ Parameters:
     the paid amount
 """
 def outputCleanedData(memberInfoAndPaidInfoList) -> None:
-    with open("d0FullCompletedAssignment\\cleanedMemberInfoAndPaidInfo.json", "w") as file:
+    with open("cleanedMemberInfoAndPaidInfo.json", "w") as file:
         json.dump(memberInfoAndPaidInfoList, file, indent=2)
 
 """
@@ -114,7 +114,7 @@ Summary:
     Calls all functions performing the data cleaning, printing statistics, and saving output
 Parameters:
     memberInfoFile: the name of the csv file that contain the member info
-    memberPaidInfoFile: the name of the csv file that contain the paid info
+    memberPaidInfoFile: the name of the csv file that contains the member paid info
 """
 def main(memberInfoFile, memberPaidInfoFile):
     directory = os.path.dirname(os.path.abspath(__file__))
@@ -124,6 +124,7 @@ def main(memberInfoFile, memberPaidInfoFile):
     highestPaidList = sorted(memberInfoAndPaidInfoList, key=lambda d: d["paidAmount"], reverse=True)
     printStats(highestPaidList)
     outputCleanedData(memberInfoAndPaidInfoList)
+    
     
 if __name__ == "__main__":
     main("memberInfo.csv", "memberPaidInfo.csv")
