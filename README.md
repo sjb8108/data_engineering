@@ -1,11 +1,10 @@
 D0: Actual Submission
 How to Run:
 
-D1: This was done for fun and messing around with AWS because of this the IaC for this is only the example data injection in the aws firehose since I created everything else from the AWS website. below I will list what configurations I had for all AWS applications used if you want to check my application:
-Note: If a setting/parameter is not listed that means the option was not enabled, since D0 is my submission I know now what IaC means now, since I can use AWS CDK in python to create the below applications!
+D1: This was done for fun and messing around with AWS because of this the IaC for this is only the example data injection in the aws firehose since I created everything else from the AWS website. Since D0 is my submission I know now what IaC means now after realzing I should of used AWS CDK in python to create the below applications. Below I will list what configurations I had for all AWS applications used if you want to check my application:\
+Note: If a setting/parameter is not listed that means the option was not enabled!
 1. Amazon Kinesis\
     &ensp; Name: D1-Assignment-Megazone \
-    &ensp; Everything else was default settings 
 2. Amazon Data Firehose\
     &ensp; Kinesis Data Stream: D1-Assignment-Megazone\
     &ensp; Convert Record Format: True\
