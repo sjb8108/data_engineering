@@ -60,13 +60,24 @@ def mergeDataFromMemberPaidInfo(directory, memberPaidInfoFile, memberInfoList) -
                 memberInfoList[index]["paidAmount"] = seperatedData[2].replace("\n", "")
                 index+=1
     return memberInfoList
-                
-            
+
+def printStats(highestPaidList) -> None:   
+    highestPaidPerson = highestPaidList[0]
+    print("Person with the highest paid amount:")
+    for key in highestPaidPerson:
+        print("\t" + str(key) + " : " + str(highestPaidPerson[key]))
+    totalPaidAmount = 0
+    for person in highestPaidList:
+        totalPaidAmount += int(person["paidAmount"])
+    print("Total Paided Amount: " + str(totalPaidAmount))
+    
 def main(memberInfoFile, memberPaidInfoFile):
     directory = os.path.dirname(os.path.abspath(__file__))
     memberInfoList = getDataFromMemberInfo(directory, memberInfoFile)
     memberInfoAndPaidInfoList = mergeDataFromMemberPaidInfo(directory, memberPaidInfoFile, memberInfoList)
-    print()
+    highestPaidList = sorted(memberInfoAndPaidInfoList, key=lambda d: d["paidAmount"], reverse=True)
+    printStats(highestPaidList)
+    
     
 if __name__ == "__main__":
     main("memberInfo.csv", "memberPaidInfo.csv")
