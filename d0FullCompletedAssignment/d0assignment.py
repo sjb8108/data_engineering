@@ -32,21 +32,40 @@ def getDataFromMemberInfo(directory, memberInfoFile) -> list[dict]:
             memberInfoList.append(memberInfoDict)
     return memberInfoList
 
-def getDataFromMemberPaidInfo(directory, memberPaidInfo) -> list[dict]:
-    memberPaidInfoList = []
+def mergeDataFromMemberPaidInfo(directory, memberPaidInfoFile, memberInfoList) -> list[dict]:
     memberPaidInfoFile = os.path.join(directory, "CSV Files", memberPaidInfoFile)
     with open(memberPaidInfoFile, "r") as file:
         next(file) #skips first line
-        print()
+        index = 0
         for entry in file:
-            memberPaidInfoDict = {}
             seperatedData = entry.split(",")
+            memberId = seperatedData[0]
+            memberExists = False
+            for memberInfoEntry in memberInfoList:
+                if memberInfoEntry["memberId"] == memberId:
+                    if seperatedData[1] == "":
+                        memberExists = True
+                    else:
+                        fullNameList = seperatedData[1].split(" ")
+                        firstName = fullNameList[0]
+                        lastName = fullNameList[1]
+                        #checking if name conflict
+                        if firstName != memberInfoList[index]["firstName"] or lastName != memberInfoList[index]["lastName"]:
+                            memberInfoList.remove(memberInfoEntry)
+                            memberExists = False
+                        else:
+                            memberExists = True
+                    break
+            if memberExists:
+                memberInfoList[index]["paidAmount"] = seperatedData[2].replace("\n", "")
+                index+=1
+    return memberInfoList
+                
             
 def main(memberInfoFile, memberPaidInfoFile):
-    memberInfoAndPaidInfoDict = {}
-    memberInfoAndPaidInfoList = []
     directory = os.path.dirname(os.path.abspath(__file__))
     memberInfoList = getDataFromMemberInfo(directory, memberInfoFile)
+    memberInfoAndPaidInfoList = mergeDataFromMemberPaidInfo(directory, memberPaidInfoFile, memberInfoList)
     print()
     
 if __name__ == "__main__":
