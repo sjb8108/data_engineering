@@ -1,15 +1,15 @@
-D0: Actual Submission
-How to Run (2 ways):
-First Way (Terminal based): 
-    &ensp;1. Git clone the repo into a file a location of your choosing. 
-    &ensp;2. Open the command terminal and cd into the cloned repo and cd into d0FullCOmpletedAssighnment
-    &ensp;3. Run the command python d0assignment.py
-    &ensp;4. The JSON file with the cleaned output will be in the d0FullCompletedAssignment Folder and the terminal for print out the statistics.
-Second Way (Non terminal based):
-    &ensp;1. Git clone the repo into a file a location of your choosing. 
-    &ensp;2. Open any IDE of your choosing, usually best if VSCode
-    &ensp;3. Use the IDE to open the newly git cloned repo
-    &ensp;4. Click on the d0assignment.py file
+D0: Actual Submission \
+How to Run (2 ways): \
+First Way (Terminal based): \
+    &ensp;1. Git clone the repo into a file a location of your choosing. \
+    &ensp;2. Open the command terminal and cd into the cloned repo and cd into d0FullCOmpletedAssighnment \
+    &ensp;3. Run the command python d0assignment.py\
+    &ensp;4. The JSON file with the cleaned output will be in the d0FullCompletedAssignment Folder and the terminal for print out the statistics.\
+Second Way (Non terminal based):\
+    &ensp;1. Git clone the repo into a file a location of your choosing. \
+    &ensp;2. Open any IDE of your choosing, usually best if VSCode\
+    &ensp;3. Use the IDE to open the newly git cloned repo\
+    &ensp;4. Click on the d0assignment.py file\
     &ensp;5. Click the run button
 
 D1: This was done for research and getting more understanding of AWS because of this the IaC for this is only the example data injection in the aws firehose since I created everything else from the AWS website. Since D0 is my submission I know now what IaC means now after realzing I should of used AWS CDK in python to create the below applications. Below I will list what configurations I had for all AWS applications used if you want to check my application:\
