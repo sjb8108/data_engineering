@@ -1,0 +1,62 @@
+[
+  {
+    "memberId": "1",
+    "firstName": "Kevin",
+    "lastName": "Harvick",
+    "paidAmount": "61"
+  },
+  {
+    "memberId": "2",
+    "firstName": "Joey",
+    "lastName": "Logano",
+    "paidAmount": "57"
+  },
+  {
+    "memberId": "3",
+    "firstName": "Austin",
+    "lastName": "Cindric",
+    "paidAmount": "10"
+  },
+  {
+    "memberId": "4",
+    "firstName": "Toni",
+    "lastName": "Breidinger",
+    "paidAmount": "98"
+  },
+  {
+    "memberId": "5",
+    "firstName": "William",
+    "lastName": "Byron",
+    "paidAmount": "35"
+  },
+  {
+    "memberId": "9",
+    "firstName": "Chase",
+    "lastName": "Briscoe",
+    "paidAmount": "85"
+  },
+  {
+    "memberId": "10",
+    "firstName": "Kyle",
+    "lastName": "Busch",
+    "paidAmount": "34"
+  },
+  {
+    "memberId": "11",
+    "firstName": "Chase",
+    "lastName": "Elliott",
+    "paidAmount": "73"
+  },
+  {
+    "memberId": "15",
+    "firstName": "Ryan",
+    "lastName": "Blaney",
+    "paidAmount": "32"
+  },
+  {
+    "memberId": "21",
+    "firstName": "John",
+    "lastName": "Smith",
+    "paidAmount": "69"
+  }
+]

@@ -71,12 +71,17 @@ def printStats(highestPaidList) -> None:
         totalPaidAmount += int(person["paidAmount"])
     print("Total Paided Amount: " + str(totalPaidAmount))
     
+def outputCleanedData(memberInfoAndPaidInfoList) -> None:
+    with open("d0FullCompletedAssignment\\cleanedMemberInfoAndPaidInfo.json", "w") as file:
+        json.dump(memberInfoAndPaidInfoList, file, indent=2)
+    
 def main(memberInfoFile, memberPaidInfoFile):
     directory = os.path.dirname(os.path.abspath(__file__))
     memberInfoList = getDataFromMemberInfo(directory, memberInfoFile)
     memberInfoAndPaidInfoList = mergeDataFromMemberPaidInfo(directory, memberPaidInfoFile, memberInfoList)
     highestPaidList = sorted(memberInfoAndPaidInfoList, key=lambda d: d["paidAmount"], reverse=True)
     printStats(highestPaidList)
+    outputCleanedData(memberInfoAndPaidInfoList)
     
     
 if __name__ == "__main__":
